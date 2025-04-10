@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager System</title>
+  <link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <button id="toggleDarkMode">Toggle Dark Mode</button>
+  <div class="task-input-container">
+  
+    <select id="taskPriority">
+      <option value="Low">Low Priority</option>
+      <option value="Medium">Medium Priority</option>
+      <option value="High">High Priority</option>
+    </select>
+  
+    <select id="taskStatus">
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+    </select>
+
+    Due Date
+    <input type="date" id="taskDueDate" />
+
+    <textarea id="taskDescription" maxlength="200" placeholder="What's on your mind?"></textarea>
+    <div><span id="charCount">0</span>/200 characters</div>
+  
+    <div>
+      <button id="btnAddTask">Add Task</button>
+    </div>
+    <div id="error" class="error"></div>
+
+    
+  </div>
+
+  <input type="text" id="searchInput" placeholder="Search tasks..." oninput="displayTasks()" />
+  <div>
+    <button id="btnfilterTasksall">All</button>
+    <button id="btnfilterTasksPending">Pending</button>
+    <button id="btnfilterTasksCompleted">Completed</button>
+  </div>
+
+  <div id="notification" class="notification" style="display: none;"></div>
+  <div id="taskList"></div>
+
+</body>
+</html>
